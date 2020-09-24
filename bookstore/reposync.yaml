@@ -1,0 +1,12 @@
+# root-sync.yaml
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: root-sync
+  namespace: config-management-operator
+spec:
+  git:
+    repo: https://github.com/brycecr/csmr-sample.git
+    dir: "bookstore"
+    auth: none
+  sourceFormat: hierarchy
